@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no" />
+    <title>Fake Nintendo Switch Error</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @-moz-document url-prefix() {
+            @font-face {
+                font-family: '-webkit-standard';
+                src: url('nintendo_udsg-r_std_003.ttf');
+            }
+        }
+
+        body {
+            
+        }
+        
+        .background {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url("assets/backgrounds/breath-of-the-wild.jpeg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(7px);
+            z-index: -1;
+        }
+      
+        .text-container {
+            text-align: center;
+        }
+        
+        .ok-cancel-dialog {
+            background-color: #27282a;
+            color: white;
+            text-align: center;
+            font-family: '-webkit-standard';
+            width: 650px;
+            height: 300px;
+            border-spacing: 0px;
+            font-size: 24px;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.7;
+        }
+        
+        button.dialog-button {
+            width: 100%;
+            height: 100%;
+            background: none;
+            border: none;
+            text-align: center;
+            font-family: '-webkit-standard';
+            font-size: 24px;
+        }
+
+        .dialog-text {
+            font-size: 21px;
+            text-align: left;
+            padding-left: 75px;
+            padding-top: 10px
+        }
+        
+        
+        .error-text {
+            padding-left: 20px;
+            padding-top: 14px;
+            font-family: '-webkit-standard';
+            text-align: left;
+            color: #8f9092;
+            font-size: 18px;
+        }
+        
+        .dialog-button {
+            color: #38a6c3;
+            height: 70px;
+            border-top: 2px solid #676767;
+            user-select: none;
+            width: 50%;
+        }
+
+        .dialog-button:focus {
+            box-shadow: 0 0 1px 1px #0390bb, inset 0 0 1px 1px #0390bb, 0 0 1px 1px #0390bb, inset 0 0 1px 1px #0390bb, 0 0 1px 1px #0390bb, inset 0 0 1px 1px #0390bb, 0 0 1px 1px #0390bb, inset 0 0 1px 1px #0390bb;
+            border: 0px;
+            z-index: 1;
+            position: relative;
+            border-radius: 3px;
+        }
+        
+        .dialog-button:hover {
+            box-shadow: 0 0 1px 1px #0390bb, inset 0 0 1px 1px #0390bb, 0 0 1px 1px #0390bb, inset 0 0 1px 1px #0390bb, 0 0 1px 1px #0390bb, inset 0 0 1px 1px #0390bb, 0 0 1px 1px #0390bb, inset 0 0 1px 1px #0390bb;
+            border: 0px;
+            z-index: 1;
+            position: relative;
+            border-radius: 3px;
+        }
+
+        .dialog-button:active {
+            background-color: #3c595d;
+        }
+
+        .ok-cancel-dialog td:not(:first-child) { border-left:2px solid #676767; };
+        .ok-cancel-dialog td:not(:last-child) { border-right:2px solid #676767; };
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <table class="ok-cancel-dialog">
+        <tr>
+            <td class="error-text" colspan="2">Error Code: 2123-1502</td>
+        </tr>
+        <tr>
+            <td class="dialog-text" colspan="2">
+            
+                                                  <p>An error has occurred.
+                                                  <br>
+                                                  <br>
+            
+                                                   If the problem persists, please refer to the<br>
+                                                   Nintendo Support website.<br>
+                                                   support.nintendo.com/switch/error
+</p>
+</td>
+        </tr>
+        <tr>
+            <td class="dialog-button" onclick="location.href='blackscreen.html';" style="cursor:pointer;">
+                <button class="dialog-button" onclick="location.href='blackscreen.html';">
+                    OK
+                </button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

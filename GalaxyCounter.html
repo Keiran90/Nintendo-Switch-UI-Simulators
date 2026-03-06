@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Mario Movie</title>
+    <style>
+      body {
+        background-image: url('thumb-1920-103560.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      
+      #demo {
+        left: 0;
+        line-height: 200px;
+        margin-top: -100px;
+        color: white;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 100%;
+      }
+
+      #cdate {
+        left: 0;
+        line-height: 200px;
+        margin-top: -100px;
+        position: absolute;
+        text-align: center;
+        color: white;
+        top: 80%;
+        width: 100%;
+        padding-top: 30px;
+      }
+      
+      #title {
+        left: 0;
+        line-height: 200px;
+        margin-top: -100px;
+        position: absolute;
+        text-align: center;
+        color: white;
+        top: 40%;
+        width: 100%;
+      }
+      
+      #rdate {
+        left: 0;
+        line-height: 200px;
+        margin-top: -100px;
+        position: absolute;
+        text-align: center;
+        color: white;
+        top: 55%;
+        width: 100%;
+      }
+    </style>
+    <script>
+
+      // Set the date we're counting down to
+      var countDownDate = new Date("Mar 31, 2026 7:00:00").getTime();
+      var d = new Date(); 
+
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+      var d = new Date(); 
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("demo").innerHTML = "Time Left: " + days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+      document.getElementById("cdate").innerHTML = d;
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "Go Watch It Dumbass!";
+      }
+    }, 1000);
+    </script>
+  </head>
+  <body>
+    <!-- Display the countdown timer in an element -->
+    <h2 id="title">The Mario Galaxy Movie</h2>
+    <h3 id="rdate">Apr 1, 2026</h3>
+    <h2 id="demo">Loading....</h2>
+    <p id="cdate">Loading....</p> 
+  </body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Home Menu</title>
+<head>
+  <style>
+    @-moz-document url-prefix() {
+        @font-face {
+            font-family: '-webkit-standard';
+            src: url('nintendo_udsg-r_std_003.ttf');
+        }
+    }
+    
+    html {
+      background-color: #2e2e2e
+    }
+    
+    .game-list {
+      position: fixed;
+      bottom: 35vh;
+      left: 12px;
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      gap: 10px; /* Spacing between buttons */
+      padding: 50px;
+    }
+    
+    .status-info {
+      border-top: 2px solid #6b6b6b;
+      height: 50px;
+      width: 98.7vw;
+      position: fixed;
+      bottom: 0;
+      color: #adadad;
+      font-family: '-webkit-standard';
+    }
+    
+    .options {
+      padding-top: 0px;
+      float: right;
+      font-family: '-webkit-standard';
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+    
+    .controller {
+      float: left;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    
+    .mini-button-list {
+      position: fixed;
+      bottom: 20vh;
+      left: 27vw;
+    }
+    
+    .user-button {
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      padding-left: 15px;
+      margin-left: 35px;
+      margin-top: 35px;
+      background-color: #424242;
+      border: none;
+      flex: 0 0 auto; /* Keeps buttons at their original size */
+      outline: 2px solid #0390bb;
+      background-image: url(assets/users/118199048.png);
+      background-size: 40px 40px;
+    }
+    
+    .user-button-2 {
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      padding-left: 15px;
+      margin-left: 15px;
+      margin-top: 30px;
+      background-color: #FFFFFF;
+      border: none;
+      flex: 0 0 auto; /* Keeps buttons at their original size */
+      background-image: url(assets/users/92565cd4c832d0201f1140aca2247c437b64ed5cd946859afd4be229bb69f3c7.png);
+      background-size: 40px 40px;
+    }
+    
+    .user-button-3 {
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      padding-left: 15px;
+      margin-left: 15px;
+      margin-top: 30px;
+      background-color: #FFFFFF;
+      border: none;
+      flex: 0 0 auto; /* Keeps buttons at their original size */
+      background-image: url(assets/users/c6dfcb699f1b27a818d57a60905e01d582e21169a6e8944cad96c675751fa472.png);
+      background-size: 40px 40px;
+    }
+    
+    .mini-button {
+      height: 69px;
+      width: 69px;
+      border-radius: 100%;
+      padding: 10px;
+      margin: 10px;
+      background-color: #4f4f4f;
+      border: none;
+      flex: 0 0 auto; /* Keeps buttons at their original size */
+    }
+    
+    
+   .mini-button:hover {
+      background-color: #424242;
+    }
+    
+    .mini-button:focus {
+      background-color: #424242;
+      outline: 2px solid #0390bb;
+    }
+      
+    .game-button {
+      display: flex;
+      vertical-align: middle;
+      justify-content: center;
+      align-items: center;
+      position: center;
+      height: 256px;
+      width: 256px;
+      padding: 10px;
+      margin: 10px;
+      color: #ffffff;
+      border: none;
+      background: url('assets/icons/NS 1/mario-rabbids-kingdom-battle.png');
+      flex: 0 0 auto; /* Keeps buttons at their original size */
+    }
+
+    .game-button-2 {
+      display: flex;
+      vertical-align: middle;
+      justify-content: center;
+      align-items: center;
+      position: center;
+      height: 256px;
+      width: 256px;
+      padding: 10px;
+      margin: 10px;
+      color: #ffffff;
+      border: none;
+      flex: 0 0 auto; /* Keeps buttons at their original size */
+      background: url('assets/icons/NS 1/mario-&-luigi-brothership.png');
+    }
+    
+    .game-button-3 {
+      display: flex;
+      vertical-align: middle;
+      justify-content: center;
+      align-items: center;
+      position: center;
+      height: 256px;
+      width: 256px;
+      padding: 10px;
+      margin: 10px;
+      color: #ffffff;
+      border: none;
+      background: url('assets/icons/NS 1/new-super-mario-bros-u-deluxe.png');
+      flex: 0 0 auto; /* Keeps buttons at their original size */
+    }
+    
+    .game-button-4 {
+      display: flex;
+      vertical-align: middle;
+      justify-content: center;
+      align-items: center;
+      position: center;
+      height: 256px;
+      width: 256px;
+      padding: 10px;
+      margin: 10px;
+      color: #ffffff;
+      border: none;
+      background: url('assets/icons/NS 1/paper-mario-the-thousand-year-door.png');
+      flex: 0 0 auto; /* Keeps buttons at their original size */
+    }
+    
+    .game-button-5 {
+      display: flex;
+      vertical-align: middle;
+      justify-content: center;
+      align-items: center;
+      position: center;
+      height: 256px;
+      width: 256px;
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      background: url('assets/icons/NS 1/super-mario-3d-world-bowsers-fury.png');
+      flex: 0 0 auto; /* Keeps buttons at their original size */
+    }
+    
+    .game-button-6 {
+      display: flex;
+      vertical-align: middle;
+      justify-content: center;
+      align-items: center;
+      position: center;
+      height: 256px;
+      width: 256px;
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      background: url(assets/icons/mario-&-luigi-brothership.png);
+      flex: 0 0 auto; /* Keeps buttons at their original size */
+    }
+    
+    .game-button:hover {
+      outline-offset: 2px;
+      color: #ffffff;
+      outline: 3px solid #0390bb;
+    }
+    
+    .game-button-2:hover {
+      color: #ffffff;
+      outline-offset: 2px;
+      outline: 3px solid #0390bb;
+    }
+
+    .game-button-3:hover {
+      color: #ffffff;
+      outline-offset: 2px;
+      outline: 3px solid #0390bb;
+    }
+    
+    .game-button-4:hover {
+      color: #ffffff;
+      outline-offset: 2px;
+      outline: 3px solid #0390bb;
+    }
+
+    .game-button-5:hover {
+      color: #ffffff;
+      outline-offset: 2px;
+      outline: 3px solid #0390bb;
+    }
+    
+    .game-button-6:hover {
+      color: #ffffff;
+      outline-offset: 2px;
+      outline: 3px solid #0390bb;
+    }
+
+    .game-button:focus {
+      color: #ffffff;
+      outline-offset: 2px;
+      outline: 3px solid#0390bb;
+    }
+    
+    .game-button-2:focus {
+      color: #ffffff;
+      outline-offset: 2px;
+      outline: 3px solid #0390bb;
+    }
+
+    .game-button-3:focus {
+      color: #ffffff;
+      outline-offset: 2px;
+      outline: 3px solid #0390bb;
+    }
+    
+    .game-button-4:focus {
+      color: #ffffff;
+      outline-offset: 2px;
+      outline: 3px solid #0390bb;
+    }
+
+    .game-button-5:focus {
+      color: #ffffff;
+      outline-offset: 2px;
+      outline: 3px solid #0390bb;
+    }
+    
+    .game-button-6:focus {
+      color: #ffffff;
+      outline-offset: 2px;
+      outline: 3px solid #0390bb;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="system-info">
+      <button class="user-button"></button>
+      <button class="user-button-2"></button>
+      <button class="user-button-3"></button>
+    </div>
+    <div class="game-list">
+      <button class="game-button" onclick="location.href='blackscreen.html';"></button>
+      <button class="game-button-2" onclick="location.href='blackscreen.html';"></button>
+      <button class="game-button-3" onclick="location.href='blackscreen.html';"></button>
+      <button class="game-button-4" onclick="location.href='blackscreen.html';"></button>
+      <button class="game-button-5" onclick="location.href='blackscreen.html';"></button>
+      <button class="game-button-5" onclick="location.href='blackscreen.html';"></button>
+      <button class="game-button-6" onclick="location.href='blackscreen.html';"></button>
+    </div>
+  <div class="mini-button-list">
+    <button class="mini-button" onclick="location.href='blackscreen.html';"></button>
+    <button class="mini-button" onclick="location.href='blackscreen.html';"></button>
+    <button class="mini-button" onclick="location.href='blackscreen.html';"></button>
+    <button class="mini-button" onclick="location.href='blackscreen.html';"></button>
+    <button class="mini-button" onclick="location.href='blackscreen.html';"></button>
+    <button class="mini-button" onclick="location.href='blackscreen.html';"></button>
+    <button class="mini-button" onclick="location.href='blackscreen.html';"></button>
+  </div>
+  
+  <div class="status-info">
+    <p class="controller"><img class="plus-icon" src="assets/ui/a.svg" alt="A" width="27" height="27"></p>
+    <p class="options"><img class="plus-icon" src="assets/ui/a.svg" alt="A" width="27" height="27">Start</p>
+    <p class="options"><img class="plus-icon" src="assets/ui/+ Button.svg" alt="+" width="27" height="27">Options</p>
+  </div>
+</body>
